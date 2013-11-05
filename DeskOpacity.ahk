@@ -24,6 +24,8 @@ return
 SendMode Input          ; новый режим высылки без задержки и повышенной надежности
 DetectHiddenWindows, on
 
+SC029::`
+;-----------------------------------------------------
 
 #!NumpadAdd::
 	MouseGetPos,,, MouseWin
@@ -40,6 +42,7 @@ DetectHiddenWindows, on
 		WinSet, Transparent, Off, ahk_id %MouseWin%
 	}
 return
+;-----------------------------------------------------
 
 #!NumpadSub::
 	MouseGetPos,,, MouseWin
@@ -53,6 +56,7 @@ return
 	}
 	WinSet, Transparent, %TValue%, ahk_id %MouseWin%
 return
+;-----------------------------------------------------
 
 #o:: ; Нажмите Win+O, чтобы отключить прозрачность окна под курсором мыши.
      ; Курсор должен быть на видимой части окна.
@@ -68,11 +72,13 @@ return
 		WinSet, Transparent, 150, ahk_id %MouseWin%
 	}
 return
+;-----------------------------------------------------
 
 #i::
 	MouseGetPos,,, MouseWin
 	WinSet, AlwaysOnTop, Toggle, ahk_id %MouseWin%
 return
+;-----------------------------------------------------
 
 /*
 #g:: ; Нажмите Win+G, чтобы посмотреть текущие настройки окна под курсором мыши.
