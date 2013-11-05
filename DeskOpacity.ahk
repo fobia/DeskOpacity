@@ -6,13 +6,13 @@
 
 ;-----------------------------------------------------
 Menu, tray, NoStandard
-Menu, tray, add, DeskOpacity-0.1, MenuHandler ; Добавить новый пункт.
+Menu, tray, add, DeskOpacity, MenuHandler ; Добавить новый пункт.
 Menu, tray, add  ; Добавить разделитель.
 Menu, tray, add, Exit, ExitHandler  ; Добавить новый пункт.
 return
 
 MenuHandler:
-	MsgBox DeskOpacity-0.1`n`nWin+o `t`t прозрачность окна 100 (вкл/выкл)`nWin+i `t`t поверх всех окон (вкл/выкл)`nWin+Alt+NumAdd `t добавить прозрачность +16 (max: 255)`nWin+Alt+NumSub `t убрать прозрачность -16 (min: 50)
+	MsgBox DeskOpacity`n`nWin+o `t`t прозрачность окна 100 (вкл/выкл)`nWin+i `t`t поверх всех окон (вкл/выкл)`nWin+Alt+NumAdd `t добавить прозрачность +16 (max: 255)`nWin+Alt+NumSub `t убрать прозрачность -16 (min: 50)
 return
 
 ExitHandler:
